@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Compilar Angular
-        run: npm run build -- --base-href /luislopez/
+        run: npm run build -- --base-href "/${{ github.event.repository.name }}/"
 
       - name: Preparar artefacto de Pages
         uses: actions/upload-pages-artifact@v3
