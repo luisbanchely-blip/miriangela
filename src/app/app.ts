@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +6,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  readonly contactEmail = 'miriangela.alvarado@gmail.com';
+  readonly showMobileMenu = signal(false);
+
+  toggleMobileMenu(): void { this.showMobileMenu.update((isOpen) => !isOpen); }
+}

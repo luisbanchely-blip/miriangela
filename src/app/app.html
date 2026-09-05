@@ -1,34 +1,20 @@
-<main class="hero" aria-labelledby="main-title">
-  <div class="orb orb-left" aria-hidden="true"></div>
-  <div class="orb orb-right" aria-hidden="true"></div>
-
-  <section class="card">
-    <p class="eyebrow">Angular + creatividad</p>
-    <h1 id="main-title">Hola Mundo</h1>
-    <p class="lead">
-      Una portada limpia, moderna y con personalidad para arrancar tu proyecto con estilo.
-    </p>
-
-    <div class="actions">
-      <a class="btn btn-primary" href="#demo">Ver demo</a>
-      <a class="btn btn-ghost" href="https://angular.dev" target="_blank" rel="noopener noreferrer">
-        Documentacion Angular
-      </a>
-    </div>
-
-    <ul class="stats" id="demo" aria-label="Resumen rapido">
-      <li>
-        <strong>100%</strong>
-        <span>Responsive</span>
-      </li>
-      <li>
-        <strong>AA</strong>
-        <span>Contraste alto</span>
-      </li>
-      <li>
-        <strong>CSS</strong>
-        <span>Sin librerias</span>
-      </li>
-    </ul>
-  </section>
+<header class="site-header">
+  <a class="brand" href="#inicio" aria-label="Volver al inicio">Miriangela Alvarado <span>soluciones para tus deudas</span></a>
+  <button class="menu-toggle" type="button" aria-label="Abrir menú" [attr.aria-expanded]="showMobileMenu()" (click)="toggleMobileMenu()">Menú</button>
+  <nav class="main-nav" [class.is-open]="showMobileMenu()" aria-label="Navegación principal">
+    <a href="#servicios" (click)="showMobileMenu.set(false)">Servicios</a>
+    <a href="#como-funciona" (click)="showMobileMenu.set(false)">Cómo te ayudo</a>
+    <a href="#preguntas" (click)="showMobileMenu.set(false)">Preguntas frecuentes</a>
+    <a class="nav-cta" [href]="'mailto:' + contactEmail">Escríbeme</a>
+  </nav>
+</header>
+<main id="inicio">
+  <section class="hero" aria-labelledby="main-title"><div class="hero-copy"><p class="eyebrow">Orientación cercana y clara</p><h1 id="main-title">Tus deudas no tienen por qué decidir tu futuro.</h1><p class="hero-lead">Soy Miriangela Alvarado. Te ayudo a entender tus opciones para recuperar el control frente a tus deudas, tus cuotas y esos intereses que no dejan de crecer.</p><div class="hero-actions"><a class="button button-primary" [href]="'mailto:' + contactEmail">Asesórate por correo <span aria-hidden="true">↗</span></a></div><p class="hero-note"><span class="check" aria-hidden="true">✓</span> Primera orientación sin juicios y con total confidencialidad</p></div><div class="hero-aside" aria-hidden="true"></div></section>
+  <section class="intro section-band" aria-labelledby="intro-title"><div class="section-label">01 / Volver a respirar</div><div><h2 id="intro-title">No tienes que enfrentarte a tus deudas a solas.</h2><p class="large-copy">Si debes dinero a bancos, financieras, tarjetas o empresas de microcréditos, es normal sentir que no encuentras la salida. Revisamos tu situación con calma, te explico las alternativas y te ayudo a dar el siguiente paso con información, transparencia y un trato humano.</p></div></section>
+  <section class="services" id="servicios" aria-labelledby="services-title"><div class="section-heading"><p class="eyebrow">En qué puedo ayudarte</p><h2 id="services-title">Soluciones para que dejes de pagar de más.</h2></div><div class="service-grid"><article class="service-card service-main"><span class="service-number">01</span><h3>Ley de Segunda Oportunidad</h3><p>Analizamos si puedes acogerte a este mecanismo legal para reorganizar o conseguir la exoneración de determinadas deudas, según tus circunstancias.</p><a [href]="'mailto:' + contactEmail">Estudiar mi caso <span aria-hidden="true">↗</span></a></article><article class="service-card"><span class="service-number">02</span><h3>Microcréditos</h3><p>Revisamos esos créditos rápidos cuyos intereses y comisiones se han convertido en una carga difícil de sostener.</p><a [href]="'mailto:' + contactEmail">Quiero información <span aria-hidden="true">↗</span></a></article><article class="service-card"><span class="service-number">03</span><h3>Préstamos</h3><p>Estudiamos las condiciones de tus préstamos y las opciones disponibles cuando las cuotas ya no encajan en tu economía.</p><a [href]="'mailto:' + contactEmail">Revisar mi préstamo <span aria-hidden="true">↗</span></a></article><article class="service-card"><span class="service-number">04</span><h3>Tarjetas revolving</h3><p>Si llevas tiempo pagando y la deuda apenas baja, podemos revisar cómo se han aplicado los intereses y las condiciones.</p><a [href]="'mailto:' + contactEmail">Revisar mi tarjeta <span aria-hidden="true">↗</span></a></article></div></section>
+  <section class="steps" id="como-funciona" aria-labelledby="steps-title"><div class="section-heading"><p class="eyebrow">El proceso, sin complicaciones</p><h2 id="steps-title">Tres pasos para recuperar el control.</h2></div><div class="step-grid"><article class="step-card"><span>01</span><h3>Me cuentas tu situación</h3><p>Escríbeme a mi correo y cuéntame qué está pasando.</p></article><article class="step-card featured"><span>02</span><h3>Estudio tus opciones</h3><p>Revisamos si podrías cumplir los requisitos y qué alternativa puede adaptarse mejor a tu caso.</p></article><article class="step-card"><span>03</span><h3>Decides con claridad</h3><p>Te explico el camino con honestidad para que puedas avanzar sin presión.</p></article></div></section>
+  <section class="reassurance" aria-labelledby="reassurance-title"><div class="reassurance-mark" aria-hidden="true">+</div><div><p class="eyebrow">Acompañamiento humano</p><h2 id="reassurance-title">Tu problema merece ser escuchado.</h2></div><p>Buscar ayuda no es rendirse. Es empezar a tomar decisiones para proteger tu tranquilidad y construir una salida posible.</p></section>
+  <section class="faq section-band" id="preguntas" aria-labelledby="faq-title"><div class="section-label">02 / Resolver dudas</div><div><h2 id="faq-title">Preguntas que quizá también te haces.</h2><div class="faq-list"><details><summary>¿Se pueden cancelar todas las deudas?</summary><p>La ley permite la posible exoneración de determinadas deudas, pero existen requisitos, límites y excepciones. Cada caso necesita un análisis individual.</p></details><details><summary>¿Puedo reclamar los intereses de una tarjeta o microcrédito?</summary><p>Depende del contrato, de las condiciones y de cómo se haya aplicado el crédito. Podemos revisar la documentación y explicarte las opciones.</p></details><details><summary>¿La consulta tiene compromiso?</summary><p>Escríbeme para conocer tu situación y orientarte. Pedir información no te obliga a iniciar ningún procedimiento.</p></details></div></div></section>
+  <section class="contact section-band" id="contacto" aria-labelledby="contact-title"><div class="contact-intro"><p class="eyebrow">03 / Hablemos</p><h2 id="contact-title">Escríbeme y cuéntame tu caso.</h2><p>No necesitas encontrar las palabras perfectas. Envíame un correo con tus datos y una breve explicación; te responderé para escuchar tu situación.</p><a class="button button-primary" [href]="'mailto:' + contactEmail">{{ contactEmail }} <span aria-hidden="true">↗</span></a></div><div class="contact-note"><p>La información de esta web es orientativa, no constituye asesoramiento jurídico y no garantiza un resultado.</p></div></section>
 </main>
+<footer class="site-footer"><a class="brand" href="#inicio">Miriangela Alvarado <span>soluciones para tus deudas</span></a><p>Una conversación puede cambiar el rumbo.</p><a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a></footer>
